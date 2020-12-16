@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    function initArr() {
+        let arr = [];
+        let count = 0;
+        while (count < 10) {
+            let ai = Math.floor(Math.random() * (10 - (-10))) + (-10);
+            arr.push(ai);
+            count++;
+        }
+        return arr;
+    }
+sumAvg();
+    function sumAvg() {
+        let arr = initArr();
+        let sum = 0;
+        let avg;
+        let count = 0;
+        for (let i = 0; i < arr.length; i+=2) {
+            if (arr[i] % 2 !== 0) {
+                sum += arr[i];
+                count++;
+            }
+        }
+        avg = sum/count;
+        console.log(avg);
+        console.log(arr);
+    }
+</script>
 </body>
 </html>

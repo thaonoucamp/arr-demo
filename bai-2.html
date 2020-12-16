@@ -5,6 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    function initArr() {
+        let arr = [];
+        let count = 0;
+        while (count < 10) {
+            let ai = Math.floor(Math.random() * (10 - (-10))) + (-10);
+            arr.push(ai);
+            count++;
+        }
+        return arr;
+    }
+    findMax();
+    function findMax() {
+        let arr = initArr();
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            for (let j = i+1; j < arr.length; j++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+        }
+        console.log(arr);
+        console.log(max);
+    }
+</script>
 </body>
 </html>
